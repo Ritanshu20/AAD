@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:background="@drawable/profilebtn"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:paddingTop="5dp"
+        android:text="@string/btn_profile" />
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/ripple_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="@color/white_90"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="250dp"
+        android:paddingTop="5dp"
+        app:rb_duration="3000"
+        app:rb_radius="@dimen/medium"
+        app:rb_scale="6">
+
+        <TextView
+            android:id="@+id/txt_detect"
+            fontPath="fonts/ubuntu_bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/mini"
+            android:textSize="@dimen/primary_txt"
+            tools:ignore="MissingPrefix" />
+
+        <ToggleButton
+            android:id="@+id/toggle_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/duplex"
+            android:layout_marginLeft="@dimen/duplex"
+            android:layout_marginTop="@dimen/duplex"
+            android:layout_marginEnd="@dimen/duplex"
+            android:layout_marginRight="@dimen/duplex"
+            android:layout_marginBottom="@dimen/duplex"
+            android:background="@drawable/profilebtn"
+            android:textOff="@string/toggle_enable"
+            android:textOn="@string/toggle_disable" />
+
+    </com.skyfishjy.library.RippleBackground>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/desc_person"
+        android:maxHeight="@dimen/person"
+        android:src="@drawable/person_falling"
+        android:outlineAmbientShadowColor="@color/cardview_dark_background"/>
+
+</android.support.design.widget.CoordinatorLayout>
